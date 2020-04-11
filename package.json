@@ -1,11 +1,12 @@
 {
-	"name": "webprogramming-react",
+	"name": "lifftons",
 	"version": "1.0.0",
-	"description": "Ecommerce demo app using node and react.",
+	"description": "E-rental platforms.",
 	"main": "server.js",
 	"scripts": {
 		"dev": "nodemon server.js",
 		"start": "node server.js",
+		"all": "concurrently \"cd client && npm run start\" \"npm run dev\"",
 		"heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
 	},
 	"keywords": [
@@ -13,12 +14,13 @@
 		"react",
 		"mongodb"
 	],
-	"author": "Yiliyasi Aboduaini",
+	"author": "Dickens Juma",
 	"license": "MIT",
 	"dependencies": {
 		"babel-eslint": "^8.2.5",
 		"bcryptjs": "^2.4.3",
 		"body-parser": "^1.18.3",
+		"concurrently": "^5.1.0",
 		"connect-flash": "^0.1.1",
 		"eslint": "^5.0.1",
 		"express": "^4.16.3",

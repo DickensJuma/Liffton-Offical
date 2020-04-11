@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const CategorySchema = new mongoose.Schema({
   name: {
@@ -13,4 +13,4 @@ CategorySchema.pre('save', function(next) {
   next();
 });
 
-module.exports = mongoose.model("Category", CategorySchema);
+module.exports = mongoose.model('Category', CategorySchema);

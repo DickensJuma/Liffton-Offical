@@ -6,10 +6,11 @@ const config = require('./config/main');
 const morgan = require('morgan');
 const passport = require('passport');
 
+
 app.use(
-	bodyParser.urlencoded({
-		extended: false
-	})
+  bodyParser.urlencoded({
+    extended: false,
+  })
 );
 app.use(bodyParser.json());
 
@@ -21,16 +22,16 @@ app.use(passport.initialize());
 
 // Database connection
 mongoose.Promise = global.Promise;
-mongoose.connect(
-	config.database,
-	function(error) {
-		if (error) {
-			console.log(error);
-		} else {
-			console.log('Database connected successfully');
-		}
-	}
-);
+
+mongoose.connect(config.mongoURI, { useNewUrlParser: true }, function(
+  error
+) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Database connected successfully');
+  }
+});
 
 // Bringing passport strategy
 require('./config/passport')(passport);
@@ -43,7 +44,7 @@ const path = require('path');
 
 app.use(express.static(path.resolve(__dirname, 'client', 'build')));
 app.get('*', (req, res) =>
-	res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
 );
 
 const PORT = process.env.PORT || 5000;
