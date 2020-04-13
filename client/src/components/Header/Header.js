@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 export default class Header extends Component {
   constructor(props) {
     super(props);
@@ -20,148 +21,236 @@ export default class Header extends Component {
   render() {
     // const { pathname } = this.props.location;
     return (
-      
-<>
-    <div className="offcanvas-menu-overlay"></div>
-    <div className="canvas-open">
-        <i className="icon_menu"></i>
-    </div>
-    <div className="offcanvas-menu-wrapper">
-        <div className="canvas-close">
-            <i className="icon_close"></i>
+      <div>
+        <div classname="offcanvas-menu-overlay" />
+        <div classname="canvas-open">
+          <i classname="icon_menu" />
         </div>
-        <div className="language-bar">
-            <div className="language-option">
-                
-                <span>Our Services</span>
-                <i className="fa fa-angle-down"></i>
-                <div className="flag-dropdown">
-                    <ul>
-                        <li><a href="/property">E-Rental</a></li>
-                        <li><a href="/property">E-Movers</a></li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div className="property-btn">
-                <a href="/property" class="property-sub">Submit Rentals</a>
-            </div>
-        </div>
-        <nav className="main-menu">
-            <ul>
-                <li><a href="/property">Home</a></li>
-                <li><a href="/property">Rentals</a></li>
-                <li><a href="/property">Liffton Analysics</a></li>
-                <li><a href="/property">News</a></li>
-                <li><a href="/property">Listings</a></li>
-                <li><a href="/property">Contact</a></li>
-            </ul>
-        </nav>
-        <div className="nav-logo-right">
-            <ul>
-                <li>
-                    <i className="icon_phone"></i>
-                    <div className="info-text">
-                        <span>Phone:</span>
-                        <p>+254 723 567 456</p>
-                    </div>
-                </li>
-                <li>
-                    <i className="icon_map"></i>
-                    <div className="info-text">
-                        <span>Address:</span>
-                        <p>Oginga Streets, <span>Kisumu</span></p>
-                    </div>
-                </li>
-                <li>
-                    <i className="icon_mail"></i>
-                    <div className="info-text">
-                        <span>Email:</span>
-                        <p>info.lifftonHousing@gmail.com</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-     
-       <header className="header-section">
-  <div className="top-nav">
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-7">
-          <nav className="main-menu">
-            <ul>
-              <li className="active"><a href="/">Home</a></li>
-              <li><a href="/property">E-Rentals</a></li>
-              <li><a href="/property">E-Movers</a></li>
-              <li><a href="/property">Liffton Analytics</a></li>
-              <li><a href="/property">Listings</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div className="col-lg-5">
-          <div className="top-right">
-            <div className="login-option">
-              
-              <span>LOGIN</span>
-              <i className="fa fa-angle-down" />
-              <div className="flag-dropdown">
+        <div classname="offcanvas-menu-wrapper">
+          <div classname="canvas-close">
+            <i classname="icon_close" />
+          </div>
+          <div classname="language-bar">
+            <div classname="language-option">
+              <span>Our Services</span>
+              <i classname="fa fa-angle-down" />
+              <div classname="flag-dropdown">
                 <ul>
-                  <li><a href="/property">Landlord</a></li>
-                  <li><a href="/property">Tenant</a></li>
+                  <li>
+                    <a href="/property">E-Rental</a>
+                  </li>
+                  <li>
+                    <a href="/property">E-Movers</a>
+                  </li>
                 </ul>
               </div>
             </div>
-            <a href="/property" className="property-sub">Submit Rentals</a>
+            <div classname="property-btn">
+              <a href="/property" className="property-sub">
+                Submit Rentals
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className="nav-logo">
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-3">
-          <div className="logo">
-            <a href="/"><img src="img/logo.png" alt="" /></a>
-          </div>
-        </div>
-        <div className="col-lg-9">
-          <div className="nav-logo-right">
+          <nav classname="main-menu">
             <ul>
               <li>
-                <i className="icon_phone" />
-                <div className="info-text">
+                <a href="/property">Home</a>
+              </li>
+              <li>
+                <a href="/property">Rentals</a>
+              </li>
+              <li>
+                <a href="/property">Liffton Analysics</a>
+              </li>
+              <li>
+                <a href="/property">News</a>
+              </li>
+              <li>
+                <a href="/property">Listings</a>
+              </li>
+              <li>
+                <a href="/property">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div classname="nav-logo-right">
+            <ul>
+              <li>
+                <i classname="icon_phone" />
+                <div classname="info-text">
                   <span>Phone:</span>
-                  <p>+254 723 567 123</p>
+                  <p>+254 723 567 456</p>
                 </div>
               </li>
               <li>
-                <i className="icon_map" />
-                <div className="info-text">
+                <i classname="icon_map" />
+                <div classname="info-text">
                   <span>Address:</span>
-                  <p>Luthuli Streets, <span>Nairobi</span></p>
+                  <p>
+                    Oginga Streets, <span>Kisumu</span>
+                  </p>
                 </div>
               </li>
               <li>
-                <i className="icon_mail" />
-                <div className="info-text">
+                <i classname="icon_mail" />
+                <div classname="info-text">
                   <span>Email:</span>
-                  <p>Info.liffton@gmail.com</p>
+                  <p>info.lifftonHousing@gmail.com</p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
+        <header classname="header-section">
+          <div classname="top-nav">
+            <div classname="container">
+              <div classname="row">
+                <div classname="col-lg-7">
+                  <nav classname="main-menu">
+                    <ul>
+                      <li classname="active">
+                        <a href="/">Home</a>
+                      </li>
+                      <li>
+                        <a href="/property">E-Rentals</a>
+                      </li>
+                      <li>
+                        <a href="/property">E-Movers</a>
+                      </li>
+                      <li>
+                        <a href="/property">Liffton Analytics</a>
+                      </li>
+                      <li>
+                        <a href="/property">Listings</a>
+                      </li>
+                      <li>
+                        <a href="/contact">Contact</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div classname="col-lg-5">
+                  <div classname="top-right">
+                    <div classname="login-option">
+                      <span>LOGIN</span>
+                      <i classname="fa fa-angle-down">
+                        <div classname="flag-dropdown">
+                          <ul>
+                            <li>
+                              <a href="/property">Landlord</a>
+                            </li>
+                            <li>
+                              <a href="/property">Tenant</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </i>
+                    </div>
+                    <i classname="fa fa-angle-down">
+                      <a href="/property" classname="property-sub">
+                        Submit Rentals
+                      </a>
+                    </i>
+                  </div>
+                  <i classname="fa fa-angle-down"></i>
+                </div>
+                <i classname="fa fa-angle-down"></i>
+              </div>
+              <i classname="fa fa-angle-down"></i>
+            </div>
+            <i classname="fa fa-angle-down"></i>
+          </div>
+          <i classname="fa fa-angle-down">
+            <div classname="nav-logo">
+              <div classname="container">
+                <div classname="row">
+                  <div classname="col-lg-3">
+                    <div classname="logo">
+                      <a href="/">
+                        <img src="img/logo.png" alt />
+                      </a>
+                    </div>
+                  </div>
+                  <div classname="col-lg-9">
+                    <div classname="nav-logo-right">
+                      <ul>
+                        <li>
+                          <i classname="icon_phone">
+                            <div classname="info-text">
+                              <span>Phone:</span>
+                              <p>+254 723 567 123</p>
+                            </div>
+                          </i>
+                        </li>
+                        <i classname="icon_phone">
+                          <li>
+                            <i classname="icon_map">
+                              <div classname="info-text">
+                                <span>Address:</span>
+                                <p>
+                                  Luthuli Streets, <span>Nairobi</span>
+                                </p>
+                              </div>
+                            </i>
+                          </li>
+                          <i classname="icon_map">
+                            <li>
+                              <i classname="icon_mail">
+                                <div classname="info-text">
+                                  <span>Email:</span>
+                                  <p>Info.liffton@gmail.com</p>
+                                </div>
+                              </i>
+                            </li>
+                            <i classname="icon_mail"></i>
+                          </i>
+                        </i>
+                      </ul>
+                      <i classname="icon_phone">
+                        <i classname="icon_map">
+                          <i classname="icon_mail"></i>
+                        </i>
+                      </i>
+                    </div>
+                    <i classname="icon_phone">
+                      <i classname="icon_map">
+                        <i classname="icon_mail"></i>
+                      </i>
+                    </i>
+                  </div>
+                  <i classname="icon_phone">
+                    <i classname="icon_map">
+                      <i classname="icon_mail"></i>
+                    </i>
+                  </i>
+                </div>
+                <i classname="icon_phone">
+                  <i classname="icon_map">
+                    <i classname="icon_mail"></i>
+                  </i>
+                </i>
+              </div>
+              <i classname="icon_phone">
+                <i classname="icon_map">
+                  <i classname="icon_mail"></i>
+                </i>
+              </i>
+            </div>
+            <i classname="icon_phone">
+              <i classname="icon_map">
+                <i classname="icon_mail"></i>
+              </i>
+            </i>
+          </i>
+        </header>
+        <i classname="fa fa-angle-down">
+          <i classname="icon_phone">
+            <i classname="icon_map">
+              <i classname="icon_mail"></i>
+            </i>
+          </i>
+        </i>
       </div>
-    </div>
-  </div>
-</header>
-
-    </> 
     );
   }
 }
-

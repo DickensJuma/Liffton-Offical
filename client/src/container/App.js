@@ -3,14 +3,18 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { Auth as AuthPage, User, Products, Admin } from "./asyncComponent";
 import Home from "../components/Home";
+import FrontPage from "../components/FrontPage/FrontPage";
+import MainHeader from "../components/Header/Header";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { ApiClient } from "../utils/ApiClient";
 import Auth from "../utils/Auth";
 import PrivateRoute from "./PrivateRoute";
 import ChatBoxComponent from "../components/chatbox/chatBox";
-import "../styles/commonStyle.css";
+// import "../styles/commonStyle.css";
+import "../assets/styles/css/main.css";
 import AboutComponent from "../components/about";
+import { Header } from "semantic-ui-react";
 
 class App extends React.Component {
   state = {
@@ -42,14 +46,18 @@ class App extends React.Component {
     return (
       <Router>
         <div className="content">
-          <div className="nav-bar">
-            <Navbar user={user} />
-          </div>
+          {/* <div className="nav-bar"> */}
+          {/* <Navbar user={user} /> */}
+          {/* </div> */}
+          <MainHeader />
           <div className="main-content" style={{ border: "1px solid red" }}>
-            <Route path="/" exact component={Home} />
+            {/* <Route path="/" exact component={Home} /> */}
+            <Route path="/" exact component={FrontPage} />
+        
             <Route exact path="/login" component={AuthPage.Login} />
             <Route exact path="/register" component={AuthPage.Register} />
             <Route exact path="/products" component={Products.Products} />
+            <Route exact path="/landingpage" component={Products.LandingPage} />
             <Route exact path="/about" component={AboutComponent} />
             <Route
               exact
@@ -59,9 +67,9 @@ class App extends React.Component {
             <PrivateRoute exact path="/account" component={User.Profile} />
           </div>
 
-          <div className="footer">
+          {/* <div className="footer">
             <Footer />
-          </div>
+          </div> */}
           <ChatBoxComponent />
         </div>
       </Router>
