@@ -1,20 +1,10 @@
-# Online Shop
+# Nyumba Chapchap
 
 ## The system already has an admin.
 
     email: admin@admin.com
 
     pw: adminadmin
-
-## Links
-
-Github Repo: https://github.com/IlyasAbdighni/Ecommerce-react
-
-WebSite hosted at Heroku: https://webprogramming-react.herokuapp.com/
-
-Document: https://github.com/IlyasAbdighni/Ecommerce-react/blob/master/Documentation.pdf
-
-Youtube video: https://youtu.be/pmmPtAxCxsY
 
 ## Achieved points:
 
@@ -92,7 +82,7 @@ This will start the webpack dev server which will serve the client UI.
 
 ## Authors
 
-- **Yiliyasi Aboduaini** - _Initial work_ - [IlyasAbdighni](https://github.com/IlyasAbdighni/Ecommerce-react)
+- **DickensJuma** - _Initial work_ - [DickendJuma](https://github.com/DickensJuma/Liffton-official)
 
 ## License
 

@@ -4,9 +4,9 @@
 	"description": "E-rental platforms.",
 	"main": "server.js",
 	"scripts": {
-		"dev": "nodemon server.js",
+		"server": "nodemon server.js",
 		"start": "node server.js",
-		"all": "concurrently \"cd client && npm run start\" \"npm run dev\"",
+		"dev": "concurrently \"cd client && npm run start\" \"npm run server\"",
 		"heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
 	},
 	"keywords": [
