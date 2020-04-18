@@ -27,7 +27,7 @@ class SearchBar extends Component {
       isHouse: false,
       isApartment: false,
       isTownHouse: false,
-      isLot: false
+      isLot: false,
     };
   }
 
@@ -93,7 +93,7 @@ class SearchBar extends Component {
       {
         [name]: value,
         listingType,
-        homeType
+        homeType,
       },
       () => {
         const filterCriteria = this.state;
@@ -108,12 +108,14 @@ class SearchBar extends Component {
     const name = target.name;
 
     this.setState({
-      [name]: value
+      [name]: value,
     });
   }
 
   render() {
-    const { allProperties } = this.props.properties;
+    console.log(this.props.properties);
+    const  allProperties  = this.props.properties;
+
     return (
       <div id="search-bar-container" className="">
         <ul className="toolbar-left">
@@ -174,7 +176,7 @@ class SearchBar extends Component {
                                 className="checkbox"
                                 name="listingType"
                                 type="radio"
-                                onClick={event =>
+                                onClick={(event) =>
                                   this.handleInputChange(
                                     event,
                                     allProperties,
@@ -200,7 +202,7 @@ class SearchBar extends Component {
                                 type="radio"
                                 className="checkbox"
                                 name="listingType"
-                                onClick={event =>
+                                onClick={(event) =>
                                   this.handleInputChange(
                                     event,
                                     allProperties,
@@ -226,7 +228,7 @@ class SearchBar extends Component {
                                 className="checkbox"
                                 name="listingType"
                                 type="radio"
-                                onClick={event =>
+                                onClick={(event) =>
                                   this.handleInputChange(
                                     event,
                                     allProperties,
@@ -254,7 +256,7 @@ class SearchBar extends Component {
                                 className="checkbox"
                                 name="listingType"
                                 type="radio"
-                                onClick={event =>
+                                onClick={(event) =>
                                   this.handleInputChange(
                                     event,
                                     allProperties,
@@ -316,8 +318,8 @@ class SearchBar extends Component {
                             autoComplete="off"
                             placeholder="Min"
                             name="min_price"
-                            onChange={event => this.priceChange(event)}
-                            onBlur={event =>
+                            onChange={(event) => this.priceChange(event)}
+                            onBlur={(event) =>
                               this.handleInputChange(event, allProperties, null)
                             }
                             value={this.state.min_price}
@@ -334,8 +336,8 @@ class SearchBar extends Component {
                             autoComplete="off"
                             placeholder="Max"
                             name="max_price"
-                            onChange={event => this.priceChange(event)}
-                            onBlur={event =>
+                            onChange={(event) => this.priceChange(event)}
+                            onBlur={(event) =>
                               this.handleInputChange(event, allProperties, null)
                             }
                             value={this.state.max_price}
@@ -493,7 +495,7 @@ class SearchBar extends Component {
                         className="bed-options dropdown-options menu-linklist"
                       >
                         <li
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -513,7 +515,7 @@ class SearchBar extends Component {
                           data-value="1,"
                           id=""
                           className=""
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -530,7 +532,7 @@ class SearchBar extends Component {
                           data-value="2,"
                           id=""
                           className=""
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -547,7 +549,7 @@ class SearchBar extends Component {
                           data-value="3,"
                           id=""
                           className=""
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -564,7 +566,7 @@ class SearchBar extends Component {
                           data-value="4,"
                           id=""
                           className=""
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -581,7 +583,7 @@ class SearchBar extends Component {
                           data-value="5,"
                           id=""
                           className=""
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -598,7 +600,7 @@ class SearchBar extends Component {
                           data-value="6,"
                           id=""
                           className=""
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -657,7 +659,7 @@ class SearchBar extends Component {
                           type="radio"
                           className="hometype-houses-input checkbox"
                           data-za-label="SFH"
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -687,7 +689,7 @@ class SearchBar extends Component {
                           type="radio"
                           className="hometype-apart-input checkbox"
                           data-za-label="MFH"
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -717,7 +719,7 @@ class SearchBar extends Component {
                           type="radio"
                           className="hometype-condo-input checkbox"
                           data-za-label="Condo"
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -747,7 +749,7 @@ class SearchBar extends Component {
                           type="radio"
                           className="hometype-townhome-input checkbox"
                           data-za-label="Townhomes"
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -777,7 +779,7 @@ class SearchBar extends Component {
                           type="radio"
                           className="hometype-land-input checkbox"
                           data-za-label="Lot"
-                          onClick={event =>
+                          onClick={(event) =>
                             this.handleInputChange(
                               event,
                               allProperties,
@@ -1252,8 +1254,8 @@ class SearchBar extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  properties: state.properties
+const mapStateToProps = (state) => ({
+  properties: state.properties,
 });
 
 export default connect(mapStateToProps, { loadProperties, filterProperties })(

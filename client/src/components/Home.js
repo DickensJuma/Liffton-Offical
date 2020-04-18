@@ -3,12 +3,12 @@ import React, { Component, Fragment } from "react";
 import {
   Button,
   Container,
-  Divider,
-  Grid,
+  // Divider,
+  // Grid,
   Header,
   Icon,
-  Image,
-  List,
+  // Image,
+  // List,
   Menu,
   Responsive,
   Segment,
@@ -18,9 +18,9 @@ import {
 import { Link } from "react-router-dom";
 
 import Items from "./item-list/Items";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import { ApiClient } from "../utils/ApiClient";
-import axios from "axios";
+// import axios from "axios";
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
@@ -33,7 +33,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "1.5em" : "0.5em"
       }}
     >
-      Welcome to Online shop
+      Welcome to Nyumba Chapchap
     </h1>
     <h2
       inverted
@@ -43,10 +43,10 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "0.5em" : "1.5em"
       }}
     >
-      A project dedicated to study web programming.
+     E-Rental Platform
     </h2>
     <Button as={Link} to="/products" primary size="huge">
-      Go to product page
+      Go to Listing page
       <Icon name="right arrow" />
     </Button>
   </Container>

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const BrandsFooter = () => (
   <div>
     {/* Feature Section Begin */}

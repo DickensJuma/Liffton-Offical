@@ -10,15 +10,6 @@ import logger from "redux-logger";
 import reducers from "./reducers";
 import NetworkService from "./utils/NetworkService";
 
-// lifton
-// import React from "react";
-// import ReactDOM from "react-dom";
-// import { BrowserRouter } from "react-router-dom";
-// import { createStore } from "redux";
-// import { Provider } from "react-redux";
-// import reducers from "./redux/reducers";
-// import { composeWithDevTools } from "redux-devtools-extension";
-// import App from "./App";
 
 import App from "./container/App";
 

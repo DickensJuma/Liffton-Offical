@@ -3,7 +3,7 @@ import { Menu, Segment } from "semantic-ui-react";
 import { Link, Redirect } from "react-router-dom";
 import Auth from "../utils/Auth";
 import { authenticateUser } from "../actions/user";
-import { ApiClient } from "../utils/ApiClient";
+// import { ApiClient } from "../utils/ApiClient";
 import { connect } from "react-redux";
 
 const renderUserMenu = (user, pathname, logOut) => {

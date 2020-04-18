@@ -124,44 +124,6 @@ ol {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  background-image: url("../img/footer-bg.jpg");
-}
-
-.set-bg-video {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  background-image: url("../img/video-bg.jpg");
-}
-.set-bg-1 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  background-image: url("../img/feature/hero1.jpg");
-}
-.set-bg-2 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  background-image: url("../img/feature/hero2.jpg");
-}
-.set-bg-3 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  background-image: url("../img/feature/hero3.jpeg");
-}
-.set-bg-4 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  background-image: url("../img/feature/garden_estate_010.jpg");
-}
-.set-bg-5 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  background-image: url("../img/feature/hero3.jpeg");
 }
 .spad {
   padding-top: 100px;
@@ -440,7 +402,6 @@ ol {
 .single-hero-item {
   padding-top: 125px;
   height: 750px;
-  background-image: attr(data-image-src url);
 }
 .single-hero-item .hero-text {
   background: rgba(28, 28, 28, 0.6);
@@ -2893,7 +2854,13 @@ ol {
   .offcanvas-menu-wrapper .language-bar .login-option .flag-dropdown ul li {
     list-style: none;
   }
-  .offcanvas-menu-wrapper .language-bar .login-option .flag-dropdown ul li a {
+  .offcanvas-menu-wrapper
+    .language-bar
+    .login-option
+    .flag-dropdown
+    ul
+    li
+    a {
     font-size: 14px;
     color: #222222;
     display: block;
@@ -3237,7 +3204,7 @@ ol {
   }
 }
 
-.truck {
+.truck{
   height: 110px;
   width: 110px;
 }

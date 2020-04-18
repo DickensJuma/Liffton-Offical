@@ -2,30 +2,35 @@ import React from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { Auth as AuthPage, User, Products, Admin } from "./asyncComponent";
-import Home from "../components/Home";
-import FrontPage from "../components/FrontPage/FrontPage";
-import MainHeader from "../components/Header/Header";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+// import Home from "../components/Home";
+// import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
 import { ApiClient } from "../utils/ApiClient";
 import Auth from "../utils/Auth";
 import PrivateRoute from "./PrivateRoute";
 import ChatBoxComponent from "../components/chatbox/chatBox";
-// import "../styles/commonStyle.css";
-import "../assets/styles/css/main.css";
+import "../styles/commonStyle.css";
 import AboutComponent from "../components/about";
-import { Header } from "semantic-ui-react";
+import Header from "../components/Header/Header";
+// import MobileMenu from "../components/Header/MobileMenu";
+import FrontPage from "../components/FrontPage/FrontPage";
+import MasterSearchContainer from "../components/MasterSearchContainer/MasterSearchContainer";
+import SearchBar from "../components/MasterSearchContainer/SearchBar";
+import "../assets/styles/css/bootstrap.min.css";
+import "../assets/styles/css/fontawesome.min.css";
+import "../assets/styles/css/hamburgers.min.css";
+import "../assets/styles/sass/main.scss";
 
 class App extends React.Component {
   state = {
-    user: null
+    user: null,
   };
 
   componentDidMount() {
     console.log("App componentDidMount");
     if (Auth.isUserAuthenticated()) {
       ApiClient.me()
-        .then(res => {
+        .then((res) => {
           console.log("App res: ", res);
           this.setState({ user: res.data.user });
         })
@@ -37,7 +42,7 @@ class App extends React.Component {
     }
   }
 
-  redirect = path => {
+  redirect = (path) => {
     window.location = window.location.origin + path;
   };
 
@@ -45,27 +50,43 @@ class App extends React.Component {
     const { user } = this.state;
     return (
       <Router>
-        <div className="content">
-          {/* <div className="nav-bar"> */}
-          {/* <Navbar user={user} /> */}
+        {/* <div className="nav-bar"> */}
+        {/* <Navbar user={user} /> */}
+        {/* </div> */}
+        {/* <MainHeader /> */}
+        {/* <div className="main-content" style={{ border: "1px solid red" }}> */}
+        {/* <Route path="/" exact component={Home} /> */}
+        {/* <Route path="/" exact component={FrontPage} /> */}
+        <div>
+          {/* LandingPage Routes */}
+          <Route path="/" component={(props) => <Header {...props} />} />
+          {/* <Route path="/" component={(props) => <MobileMenu {...props} />} /> */}
+          <Route
+            exact
+            path={["/", "/buy", "/sell", "/rent", "/estimate"]}
+            component={(props) => <FrontPage {...props} />}
+          />
+
+          {/* Property Search Routes */}
+          <Route
+            exact
+            path="/property"
+            component={(props) => <SearchBar {...props} />}
+          />
+          <Route
+            exact
+            path="/property"
+            component={(props) => <MasterSearchContainer {...props} />}
+          />
+
+          <Route exact path="/login" component={AuthPage.Login} />
+          <Route exact path="/register" component={AuthPage.Register} />
+          <Route exact path="/products" component={Products.Products} />
+          <Route exact path="/landingpage" component={Products.LandingPage} />
+          <Route exact path="/about" component={AboutComponent} />
+          <Route exact path="/admin/product/add" component={Admin.AddProduct} />
+          <PrivateRoute exact path="/account" component={User.Profile} />
           {/* </div> */}
-          <MainHeader />
-          <div className="main-content" style={{ border: "1px solid red" }}>
-            {/* <Route path="/" exact component={Home} /> */}
-            <Route path="/" exact component={FrontPage} />
-        
-            <Route exact path="/login" component={AuthPage.Login} />
-            <Route exact path="/register" component={AuthPage.Register} />
-            <Route exact path="/products" component={Products.Products} />
-            <Route exact path="/landingpage" component={Products.LandingPage} />
-            <Route exact path="/about" component={AboutComponent} />
-            <Route
-              exact
-              path="/admin/product/add"
-              component={Admin.AddProduct}
-            />
-            <PrivateRoute exact path="/account" component={User.Profile} />
-          </div>
 
           {/* <div className="footer">
             <Footer />
@@ -77,6 +98,6 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => state;
+const mapStateToProps = (state) => state;
 
-export default connect(state => state)(App);
+export default connect((state) => state)(App);
